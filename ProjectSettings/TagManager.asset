@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Ball
+  - Brick
+  - Paddle
+  - PlayerInventory
+  - PersistentScript
+  - TimeManager
+  - Wall
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Balls
+  - Paddle
+  - Brick
+  - Wall
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Background
+    uniqueID: 1485257825
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Bricks
+    uniqueID: 4249511289
+    locked: 0
+  - name: Paddle
+    uniqueID: 1320109595
+    locked: 0
+  - name: Ball
+    uniqueID: 3099053301
+    locked: 0
+  - name: Particle
+    uniqueID: 3007240931
+    locked: 0
+  - name: UI
+    uniqueID: 968006573
+    locked: 0
