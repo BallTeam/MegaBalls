@@ -132,8 +132,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 196404}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .207088113, y: -3.00923991, z: 0}
-  m_LocalScale: {x: .5, y: .5, z: 1}
+  m_LocalPosition: {x: -4.05778074, y: -1.11660695, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 431562}
   m_Father: {fileID: 0}
@@ -222,12 +222,12 @@ BoxCollider2D:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 196404}
   m_Enabled: 1
-  m_Material: {fileID: 6200000, guid: a620f3195852ce64db62887af2202580, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: -.00597429276, y: .0609003715}
+  m_Offset: {x: .00872683525, y: .218170881}
   serializedVersion: 2
-  m_Size: {x: 1.72209835, y: 1.47862792}
+  m_Size: {x: 1.16871881, y: .645109177}
 --- !u!114 &11408652
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -239,7 +239,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d574702a5f9cf80448d9f8754a5044b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wobbling: .0299999993
+  wobbling: .075000003
   wobblingSpeed: .150000006
   rotatingScale: 0
 --- !u!114 &11408864
@@ -253,7 +253,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d574702a5f9cf80448d9f8754a5044b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wobbling: .0149999997
+  wobbling: .075000003
   wobblingSpeed: .150000006
   rotatingScale: 0
 --- !u!114 &11414064
@@ -309,7 +309,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d574702a5f9cf80448d9f8754a5044b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wobbling: .0299999993
+  wobbling: .075000003
   wobblingSpeed: .150000006
   rotatingScale: 0
 --- !u!114 &11437928
@@ -337,7 +337,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d574702a5f9cf80448d9f8754a5044b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wobbling: .0149999997
+  wobbling: .075000003
   wobblingSpeed: .150000006
   rotatingScale: 0
 --- !u!114 &11455676
@@ -381,7 +381,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sprites:
   - {fileID: 21300000, guid: 7cea51a5bb2013c42b28c1b30a1afed3, type: 3}
-  - {fileID: 21300000, guid: 9a20d787544b62b45857f798bb7b3e5a, type: 3}
+  - {fileID: 0}
   defaultsprites: []
   altSpriteChance: 100
 --- !u!114 &11495182
@@ -407,7 +407,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d574702a5f9cf80448d9f8754a5044b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wobbling: .0299999993
+  wobbling: .075000003
   wobblingSpeed: .150000006
   rotatingScale: 0
 --- !u!212 &21214264

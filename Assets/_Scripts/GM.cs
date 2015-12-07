@@ -61,7 +61,7 @@ public class GM : MonoBehaviour
         perScript = GameObject.FindGameObjectWithTag("PersistentScript").GetComponent<PersistentScripts>();
         camScript = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraScript>();
         Setup();
-
+        //StartCoroutine("AutoCheckGameOver");
     }
 
     public void Setup()
@@ -161,12 +161,19 @@ public class GM : MonoBehaviour
 
     public void DestroyBrick()
     {
-        camScript.Shake(.75f);
+        camScript.Shake(.5f);
         brickNbr--;
         CheckGameOver();
     }
 
- 
+    //IEnumerator AutoCheckGameOver ()
+    //{
+    //    while (true)
+    //    {
+    //        yield return new WaitForSeconds(2);
+    //        CheckGameOver();
+    //    }      
+    //}
 
     void CountBricks()
     {

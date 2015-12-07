@@ -5,7 +5,7 @@ public class PersistentScripts : MonoBehaviour {
 
     //public int[] shopItems;
 
-    public float paddleSize = 10; //1 = 2 Units
+    public float paddleSize = 1; //1 = 2 Units
     public float ballSize;
     //public float score;
     //public float tezzies;
