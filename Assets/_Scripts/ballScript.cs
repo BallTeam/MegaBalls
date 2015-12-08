@@ -10,6 +10,7 @@ public class ballScript : MonoBehaviour {
     public bool isEggBall;
     public bool hasRainbowTrail;
     public TrailRenderer rainbowTrail;
+    public GameObject ballSplatter;
 
     public SpriteRenderer spriteRend;
     bool isStruck;
@@ -67,6 +68,7 @@ public class ballScript : MonoBehaviour {
 
     void OnCollisionEnter2D (Collision2D other)
     {
+        Instantiate(ballSplatter, transform.position, Quaternion.identity);
         camScript.Shake(.075f);
 
         if (other.gameObject.tag == "Paddle")
