@@ -9,9 +9,10 @@ GameObject:
   m_Component:
   - 4: {fileID: 478608}
   - 114: {fileID: 11470110}
+  - 50: {fileID: 5025340}
   m_Layer: 9
   m_Name: Paddle
-  m_TagString: Untagged
+  m_TagString: Paddle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26,6 +27,7 @@ GameObject:
   - 4: {fileID: 407240}
   - 212: {fileID: 21275326}
   - 60: {fileID: 6095760}
+  - 61: {fileID: 6116922}
   m_Layer: 9
   m_Name: Bump(HasCOLLIDER)
   m_TagString: Paddle
@@ -44,7 +46,7 @@ GameObject:
   - 114: {fileID: 11414478}
   m_Layer: 9
   m_Name: PaddleVertical_standard (1)
-  m_TagString: Paddle
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -88,8 +90,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 138512}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: .469999999, z: 0}
-  m_LocalScale: {x: 6.15936756, y: .250000179, z: 1}
+  m_LocalPosition: {x: 0, y: 0.47, z: 0}
+  m_LocalScale: {x: 6.1593676, y: 0.25000018, z: 1}
   m_Children: []
   m_Father: {fileID: 478608}
   m_RootOrder: 1
@@ -112,8 +114,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 152490}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.3534143, y: -3.69540262, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 1.0071964, y: -33.28791, z: 0}
+  m_LocalScale: {x: 10, y: 10, z: 1}
   m_Children:
   - {fileID: 448378}
   - {fileID: 478608}
@@ -126,7 +128,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 135610}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.02999997, z: 0}
+  m_LocalPosition: {x: 0, y: 1.03, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 492216}
@@ -141,10 +143,27 @@ Transform:
   m_GameObject: {fileID: 179532}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -0, z: 0}
-  m_LocalScale: {x: 4.99886131, y: .935031056, z: 1}
+  m_LocalScale: {x: 4.9988613, y: 0.93503106, z: 1}
   m_Children: []
   m_Father: {fileID: 478608}
   m_RootOrder: 0
+--- !u!50 &5025340
+Rigidbody2D:
+  serializedVersion: 2
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 135610}
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0
+  m_GravityScale: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!60 &6095760
 PolygonCollider2D:
   m_ObjectHideFlags: 1
@@ -152,38 +171,53 @@ PolygonCollider2D:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 138512}
   m_Enabled: 1
+  m_Density: 1
   m_Material: {fileID: 6200000, guid: a620f3195852ce64db62887af2202580, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   m_Points:
     m_Paths:
-    - - {x: .405449778, y: -3.74926257}
-      - {x: .40625, y: .0762500018}
-      - {x: .393750012, y: .133750007}
-      - {x: .35374999, y: .213750005}
-      - {x: .326249987, y: .253749996}
-      - {x: .268750012, y: .313749999}
-      - {x: .236249998, y: .338750005}
-      - {x: .211250007, y: .35374999}
-      - {x: .196250007, y: .363750011}
-      - {x: .168750003, y: .376249999}
-      - {x: .143749997, y: .386249989}
-      - {x: .106250003, y: .398750007}
-      - {x: .0737499967, y: .40625}
-      - {x: -.0737499967, y: .40625}
-      - {x: -.116250001, y: .398750007}
-      - {x: -.168750003, y: .376249999}
-      - {x: -.213750005, y: .35374999}
-      - {x: -.253749996, y: .326249987}
-      - {x: -.268750012, y: .313749999}
-      - {x: -.326249987, y: .253749996}
-      - {x: -.35374999, y: .213750005}
-      - {x: -.363750011, y: .196250007}
-      - {x: -.388749987, y: .146249995}
-      - {x: -.398750007, y: .106250003}
-      - {x: -.40625, y: .0737499967}
-      - {x: -.405221879, y: -3.71337628}
+    - - {x: 0.40538055, y: -3.754413}
+      - {x: 0.40625, y: 0.07625}
+      - {x: 0.39375, y: 0.13375}
+      - {x: 0.35375, y: 0.21375}
+      - {x: 0.32625, y: 0.25375}
+      - {x: 0.26875, y: 0.31375}
+      - {x: 0.23625, y: 0.33875}
+      - {x: 0.21125, y: 0.35375}
+      - {x: 0.19625, y: 0.36375}
+      - {x: 0.16875, y: 0.37625}
+      - {x: 0.14375, y: 0.38625}
+      - {x: 0.10625, y: 0.39875}
+      - {x: 0.07375, y: 0.40625}
+      - {x: -0.07375, y: 0.40625}
+      - {x: -0.11625, y: 0.39875}
+      - {x: -0.16875, y: 0.37625}
+      - {x: -0.21375, y: 0.35375}
+      - {x: -0.25375, y: 0.32625}
+      - {x: -0.26875, y: 0.31375}
+      - {x: -0.32625, y: 0.25375}
+      - {x: -0.35375, y: 0.21375}
+      - {x: -0.36375, y: 0.19625}
+      - {x: -0.38875, y: 0.14625}
+      - {x: -0.39875, y: 0.10625}
+      - {x: -0.40625, y: 0.07375}
+      - {x: -0.4064684, y: -3.74917}
+--- !u!61 &6116922
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 138512}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: 1b31e0e53ca3a15479f013e9ecf7aeae, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: -3.9719367}
+  serializedVersion: 2
+  m_Size: {x: 0.8125, y: 0.6965205}
 --- !u!114 &11414478
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -195,8 +229,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2003e9620bf08554aa56279efc469aa9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paddleSpeed: 1
-  strike: 0
+  paddleSpeed: 5
+  bumperBubble: {fileID: 113528, guid: 44867dabb71e77e4ab4ff4bfe2c60b14, type: 2}
   ball_Standard: {fileID: 183418, guid: f591675d2ac2c1f4387590157ff768f1, type: 2}
   ball_Egg: {fileID: 156638, guid: d0c4f763dc8115343bb2bac817685edb, type: 2}
   ballSpawnPos: {x: 0, y: 2, z: 0}
@@ -244,13 +278,15 @@ SpriteRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: .5
+  m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: c2510c1d3a56eed47935ce7abd37c7d9, type: 3}
-  m_Color: {r: .647058845, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.64705884, g: 0, b: 0, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
 --- !u!212 &21275326
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -272,13 +308,15 @@ SpriteRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: .5
+  m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: feb73ebdd0aaa0c41aa13dd5b912b25c, type: 3}
-  m_Color: {r: .647058845, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.64705884, g: 0, b: 0, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -292,19 +330,19 @@ Prefab:
       objectReference: {fileID: 156638, guid: d0c4f763dc8115343bb2bac817685edb, type: 2}
     - target: {fileID: 0}
       propertyPath: m_IsKinematic
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_Mass
-      value: 1000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_Constraints
-      value: 6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: paddleSpeed
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_TagString
@@ -312,12 +350,40 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_LinearDrag
-      value: 100
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: strike
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_LocalScale.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_LocalScale.y
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_CollisionDetection
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_GravityScale
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_UseAutoMass
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: iniSize
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: bumperBubble
+      value: 
+      objectReference: {fileID: 113528, guid: 44867dabb71e77e4ab4ff4bfe2c60b14, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 152490}

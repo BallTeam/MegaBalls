@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GM : MonoBehaviour
 {
@@ -88,7 +89,8 @@ public class GM : MonoBehaviour
                 if (perScript.currentLevel < 2)
                 {
                     perScript.currentLevel++;
-                    Application.LoadLevel("Shop");
+                    SceneManager.LoadScene("Shop");
+                    //Application.LoadLevel("Shop");
                 }
                 else
                 {
@@ -113,13 +115,18 @@ public class GM : MonoBehaviour
 
     void LostGame ()
     {
-        Destroy(GameObject.FindGameObjectWithTag("PersistentScript"));
-        Application.LoadLevel("MainMenu");
+        //Destroy(GameObject.FindGameObjectWithTag("PersistentScript"));
+        perScript.Reset();
+        SceneManager.LoadScene("MainMenu");
+        //Application.LoadLevel("MainMenu");
     }
+
 
     void Reset2()
     {
-        Application.LoadLevel(Application.loadedLevel);
+        string sceneName = SceneManager.GetActiveScene().name;
+        SceneManager.LoadScene(sceneName);
+        //Application.LoadLevel(Application.loadedLevel);
     }
 
     public void LoseLife()

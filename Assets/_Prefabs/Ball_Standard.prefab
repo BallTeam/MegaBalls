@@ -11,7 +11,8 @@ GameObject:
   - 212: {fileID: 21203842}
   - 114: {fileID: 11436940}
   - 96: {fileID: 9670056}
-  m_Layer: 8
+  - 114: {fileID: 11429566}
+  m_Layer: 0
   m_Name: BallSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43,8 +44,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 183418}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.11211205, y: -1.6151762, z: 0}
-  m_LocalScale: {x: .75, y: .75, z: 1}
+  m_LocalPosition: {x: -4.112112, y: -1.6151762, z: 0}
+  m_LocalScale: {x: 7.5, y: 7.5, z: 1}
   m_Children:
   - {fileID: 495602}
   m_Father: {fileID: 0}
@@ -57,7 +58,7 @@ Transform:
   m_GameObject: {fileID: 160972}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: .200000003, y: .200000003, z: 1}
+  m_LocalScale: {x: -0.2, y: 0.2, z: 1}
   m_Children: []
   m_Father: {fileID: 455796}
   m_RootOrder: 0
@@ -68,6 +69,7 @@ Rigidbody2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 183418}
+  m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0
@@ -83,13 +85,14 @@ CircleCollider2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 183418}
-  m_Enabled: 1
+  m_Enabled: 0
+  m_Density: 1
   m_Material: {fileID: 6200000, guid: a620f3195852ce64db62887af2202580, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: .40625
+  m_Radius: 0.40625
 --- !u!96 &9670056
 TrailRenderer:
   m_ObjectHideFlags: 1
@@ -111,13 +114,13 @@ TrailRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: .5
+  m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Time: .300000012
-  m_StartWidth: .129999995
+  m_Time: 0.3
+  m_StartWidth: 1.3
   m_EndWidth: 0
   m_Colors:
     m_Color[0]:
@@ -135,7 +138,7 @@ TrailRenderer:
     m_Color[4]:
       serializedVersion: 2
       rgba: 12779680
-  m_MinVertexDistance: .00999999978
+  m_MinVertexDistance: 0.01
   m_Autodestruct: 0
 --- !u!114 &11405206
 MonoBehaviour:
@@ -148,8 +151,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0efb976f60a4a4c44824d665bdc5e616, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ballInitialVelocity: 600
-  strikeForce: 5
+  ballInitialVelocity: 4500
+  strikeForce: 100
   isBallInPlay: 0
   rb2D: {fileID: 0}
   isEggBall: 0
@@ -158,6 +161,20 @@ MonoBehaviour:
   ballSplatter: {fileID: 129174, guid: c09e21053e07b9946836feff445e28cc, type: 2}
   spriteRend: {fileID: 21203842}
   hasSplit: 0
+--- !u!114 &11429566
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 160972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d574702a5f9cf80448d9f8754a5044b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wobbling: 0.03
+  wobblingSpeed: 0.25
+  rotatingScale: 0
 --- !u!114 &11436940
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -190,13 +207,15 @@ SpriteRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: .5
+  m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1195913995
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 0bbdb50ff533e4142b77d80feba63687, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -246,7 +265,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_StartWidth
-      value: .129999995
+      value: 1.3
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_EndWidth
@@ -270,11 +289,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_LocalScale.x
-      value: .75
+      value: -0.2
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_LocalScale.y
-      value: .75
+      value: 7.5
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_SortingLayerID
@@ -288,6 +307,26 @@ Prefab:
       propertyPath: ballSplatter
       value: 
       objectReference: {fileID: 129174, guid: c09e21053e07b9946836feff445e28cc, type: 2}
+    - target: {fileID: 0}
+      propertyPath: ballInitialVelocity
+      value: 4500
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: wobbling
+      value: 0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: wobblingSpeed
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: strikeForce
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 183418}

@@ -73,12 +73,12 @@ public class ballScript : MonoBehaviour {
 
         if (other.gameObject.tag == "Paddle")
         {
-            if (other.gameObject.GetComponentInParent<PaddleScript>().strike)
-            {
-                rb2D.AddForce(new Vector2(rb2D.velocity.x*strikeForce, rb2D.velocity.y*strikeForce));               //FIX YOUR SHIT TEZ //IM TRYIGN TO //I DID IT
-                isStruck = true;
-                spriteRend.color = new Vector4(0, 0, 0, spriteRend.color.a);
-            }
+            //if (other.gameObject.GetComponentInParent<PaddleScript>().strike)
+            //{
+            //    rb2D.AddForce(new Vector2(0,strike));               //FIX YOUR SHIT TEZ //IM TRYIGN TO //I DID IT //NVM
+            //    isStruck = true;
+            //    spriteRend.color = new Vector4(0, 0, 0, spriteRend.color.a);
+            //}
 
             StartCoroutine("BecomeGhostBall");
         }
@@ -154,6 +154,14 @@ public class ballScript : MonoBehaviour {
         {
             transform.parent = null;
             isBallInPlay =  true;
+            if (isEggBall)
+            {
+                polyCollider.enabled = true;
+            }
+            else
+            {
+                circleCollider.enabled = true;
+            }
             rb2D.isKinematic = false;
             //if (GM.instance.isPlayModeVertical)
             //{
@@ -188,7 +196,7 @@ public class ballScript : MonoBehaviour {
     IEnumerator DrunkBall()
     {
         hasDrunkBallBeenCalled = true;
-        randomForce = new Vector2(Random.Range(-15f, 15f), Random.Range(-15f, 15f));
+        randomForce = new Vector2(Random.Range(-30f, 30f), Random.Range(-30f, 30f));
         yield return new WaitForSeconds(Random.Range(.5f, 1f));
         StartCoroutine("DrunkBall");
     }

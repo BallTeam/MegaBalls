@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 
 public class ItemShopScripts : MonoBehaviour {
@@ -9,8 +10,8 @@ public class ItemShopScripts : MonoBehaviour {
 
     public ItemShopScripts[] previousItems;
 
-    public Sprite paddleCircle;
-    public Sprite paddleFlat;
+    public Sprite continuumBalls;
+    public Sprite bumper;
     public Sprite paddleMulti;
     public Sprite inventorySlots;
     public Sprite drunkBalls;
@@ -28,8 +29,8 @@ public class ItemShopScripts : MonoBehaviour {
 
 
     //item index
-    //01 = Circle paddle
-    //02 = flat paddle
+    //01 = Continuum balls
+    //02 = bumper
     //03 = circle paddle
     //04 = more inventory space
     //05 = drunk balls
@@ -64,13 +65,13 @@ public class ItemShopScripts : MonoBehaviour {
                 switch (item)
                 {
                     case 1:
-                        if (perScript.circlePaddle)
+                        if (perScript.continuumBalls)
                         {
                             sameItem = true;
                         }
                         break;
                     case 2:
-                        if (perScript.flatPaddle)
+                        if (perScript.bumper)
                         {
                             sameItem = true;
                         }
@@ -141,10 +142,10 @@ public class ItemShopScripts : MonoBehaviour {
         switch(item)
         {
             case 1:
-                sRend.sprite = paddleCircle;
+                sRend.sprite = continuumBalls;
                 break;
             case 2:
-                sRend.sprite = paddleFlat;
+                sRend.sprite = bumper;
                 break;
             case 3:
                 sRend.sprite = paddleMulti;
@@ -199,21 +200,17 @@ public class ItemShopScripts : MonoBehaviour {
                 Debug.Log("Didnt plan that far ahead");
                 break;
         }*/
-        Application.LoadLevel("level_01");
+        //Application.LoadLevel("level_01");
+        SceneManager.LoadScene("level_01");
+
 
         switch (item)
         {
             case 1:
-                perScript.circlePaddle = true;
-                perScript.flatPaddle = false;
-                perScript.multiPaddle = false;
-                perScript.trianglePaddle = false;
+                perScript.continuumBalls = true;
                 break;
             case 2:
-                perScript.circlePaddle = false;
-                perScript.flatPaddle = true;
-                perScript.multiPaddle = false;
-                perScript.trianglePaddle = false;
+                perScript.bumper = true;
                 break;
             case 3:
                 perScript.circlePaddle = false;

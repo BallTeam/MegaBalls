@@ -9,9 +9,10 @@ GameObject:
   m_Component:
   - 4: {fileID: 466244}
   - 114: {fileID: 11441280}
+  - 50: {fileID: 5020434}
   m_Layer: 0
   m_Name: Paddle
-  m_TagString: Untagged
+  m_TagString: Paddle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -72,8 +73,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 149038}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.64710402, y: 2.48343873, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -10.257759, y: -58, z: 0}
+  m_LocalScale: {x: 10, y: 10, z: 1}
   m_Children:
   - {fileID: 448616}
   - {fileID: 466244}
@@ -86,7 +87,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 199180}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 2.03, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 409242}
@@ -98,8 +99,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 118534}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.02999997, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0.87, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children:
   - {fileID: 481126}
   m_Father: {fileID: 409242}
@@ -111,11 +112,28 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 197682}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: .689999998, z: 0}
-  m_LocalScale: {x: 2.29999995, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0.27, z: 0}
+  m_LocalScale: {x: 2.8, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 466244}
   m_RootOrder: 0
+--- !u!50 &5020434
+Rigidbody2D:
+  serializedVersion: 2
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 118534}
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0
+  m_GravityScale: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!60 &6041356
 PolygonCollider2D:
   m_ObjectHideFlags: 1
@@ -123,17 +141,16 @@ PolygonCollider2D:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 197682}
   m_Enabled: 1
+  m_Density: 1
   m_Material: {fileID: 6200000, guid: a620f3195852ce64db62887af2202580, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   m_Points:
     m_Paths:
-    - - {x: -1, y: -.904999971}
-      - {x: -1, y: -.995000005}
-      - {x: 1, y: -.995000005}
-      - {x: 1, y: -.904999971}
-      - {x: -.00623629382, y: .99900496}
+    - - {x: -1, y: -0.995}
+      - {x: 1, y: -0.995}
+      - {x: -0.006236294, y: 0.99900496}
 --- !u!114 &11441280
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -157,11 +174,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2003e9620bf08554aa56279efc469aa9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paddleSpeed: 1
-  strike: 0
+  paddleSpeed: 5
+  bumperBubble: {fileID: 113528, guid: 44867dabb71e77e4ab4ff4bfe2c60b14, type: 2}
   ball_Standard: {fileID: 183418, guid: f591675d2ac2c1f4387590157ff768f1, type: 2}
   ball_Egg: {fileID: 156638, guid: d0c4f763dc8115343bb2bac817685edb, type: 2}
-  ballSpawnPos: {x: 0, y: 4.5, z: 0}
+  ballSpawnPos: {x: 0, y: 2, z: 0}
 --- !u!114 &11480146
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -194,20 +211,66 @@ SpriteRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: .5
+  m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 5e0c84f721c98e943ab5cad0a96f778b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_CollisionDetection
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_LocalScale.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_LocalScale.y
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: paddleSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_LinearDrag
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_GravityScale
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_TagString
+      value: Paddle
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: bumperBubble
+      value: 
+      objectReference: {fileID: 113528, guid: 44867dabb71e77e4ab4ff4bfe2c60b14, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 149038}

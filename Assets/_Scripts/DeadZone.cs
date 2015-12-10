@@ -37,7 +37,7 @@ public class DeadZone : MonoBehaviour {
                 {
                     Destroy(other.gameObject);
                     balls = GameObject.FindGameObjectsWithTag("Ball");
-                    Debug.Log("Busted a ball" + balls.Length);
+                    Debug.Log("Busted a ball " + balls.Length);
                     if (balls.Length == 1)
                     {
                         GM.instance.LoseLife();

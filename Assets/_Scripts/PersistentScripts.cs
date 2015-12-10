@@ -1,11 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class PersistentScripts : MonoBehaviour {
 
     //public int[] shopItems;
 
-    public float paddleSize = 1; //1 = 2 Units
+    public float paddleSize = .5f; //1 = 2 Units
     public float ballSize;
     //public float score;
     //public float tezzies;
@@ -16,7 +17,7 @@ public class PersistentScripts : MonoBehaviour {
     public bool brickSlowDown;
     public bool endRoomSlowDown;
     public int[] playerInventory;
-    public int money;
+    public float paddleSensibility;
 
     public float screenShakeIntensity = 1;
 
@@ -31,6 +32,9 @@ public class PersistentScripts : MonoBehaviour {
     public bool superhot;
     public bool splitBalls;
     public bool rainbowTrail;
+    public bool continuumBalls;
+    public bool bumper;
+
 
     bool fastForward;
     bool backToNormalSpeed;
@@ -39,11 +43,26 @@ public class PersistentScripts : MonoBehaviour {
 
     public bool isPaddleMoving;
     
+    public void Reset ()
+    {
+        drunkBalls = false;
+        ghostBalls = false;
+        eggBalls = false;
+        superhot = false;
+        splitBalls = false;
+        rainbowTrail = false;
+        continuumBalls = false;
+        bumper = false;
+
+        luck = 0;
+        paddleSize = .5f;
+        ballSize = 1;
+        playerInventory = new int[1] {0};
+    }
 
     void Start()
     {
         fastForwardIntensity = GameObject.FindGameObjectWithTag("PersistentScript").GetComponent<PersistentScripts>().fastForwardIntensity;
-        //StartCoroutine("CompleteSave");
     }
 
     void Update ()
@@ -101,7 +120,8 @@ public class PersistentScripts : MonoBehaviour {
 
         if (Input.GetKeyDown(KeyCode.P))
         {
-            Application.LoadLevel("shop");
+            SceneManager.LoadScene("Shop");
+            //Application.LoadLevel("shop");
         }
 
         //

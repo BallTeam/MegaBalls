@@ -1,20 +1,25 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class MenuScripts : MonoBehaviour {
 
+
 	public void GoToLevel_01()
     {
-        Application.LoadLevel("level_01");
+        SceneManager.LoadScene("level_01");
+        //Application.LoadLevel("level_01");
     }
 
     public void GoToShop ()
     {
-        Application.LoadLevel("Shop");
+        SceneManager.LoadScene("Shop");
+        //Application.LoadLevel("Shop");
     }
 
     public void GoToPaddleSelect()
     {
-        Application.LoadLevel("PaddleSelect");
+        SceneManager.LoadScene("PaddleSelect");
+        //Application.LoadLevel("PaddleSelect");
     }
 }

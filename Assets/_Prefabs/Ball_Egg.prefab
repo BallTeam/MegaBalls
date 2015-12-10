@@ -27,8 +27,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 156638}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.80800629, y: -2.77248335, z: 0}
-  m_LocalScale: {x: .649999976, y: .850000024, z: 1}
+  m_LocalPosition: {x: -2.5030165, y: -20.360363, z: 0}
+  m_LocalScale: {x: 4.5, y: 6.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -39,6 +39,7 @@ Rigidbody2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 156638}
+  m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0
@@ -54,60 +55,61 @@ PolygonCollider2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 156638}
-  m_Enabled: 1
+  m_Enabled: 0
+  m_Density: 1
   m_Material: {fileID: 6200000, guid: a620f3195852ce64db62887af2202580, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   m_Points:
     m_Paths:
-    - - {x: .226249993, y: -.346249998}
-      - {x: .266250014, y: -.316249996}
-      - {x: .328750014, y: -.253749996}
-      - {x: .35374999, y: -.213750005}
-      - {x: .378749996, y: -.163749993}
-      - {x: .39625001, y: -.123750001}
-      - {x: .40625, y: -.0762500018}
-      - {x: .40625, y: .0762500018}
-      - {x: .393750012, y: .133750007}
-      - {x: .35374999, y: .213750005}
-      - {x: .326249987, y: .253749996}
-      - {x: .268750012, y: .313749999}
-      - {x: .236249998, y: .338750005}
-      - {x: .211250007, y: .35374999}
-      - {x: .196250007, y: .363750011}
-      - {x: .168750003, y: .376249999}
-      - {x: .143749997, y: .386249989}
-      - {x: .106250003, y: .398750007}
-      - {x: .0737499967, y: .40625}
-      - {x: -.0737499967, y: .40625}
-      - {x: -.116250001, y: .398750007}
-      - {x: -.168750003, y: .376249999}
-      - {x: -.213750005, y: .35374999}
-      - {x: -.253749996, y: .326249987}
-      - {x: -.268750012, y: .313749999}
-      - {x: -.326249987, y: .253749996}
-      - {x: -.35374999, y: .213750005}
-      - {x: -.363750011, y: .196250007}
-      - {x: -.388749987, y: .146249995}
-      - {x: -.398750007, y: .106250003}
-      - {x: -.40625, y: .0737499967}
-      - {x: -.40625, y: -.0737499967}
-      - {x: -.398750007, y: -.116250001}
-      - {x: -.376249999, y: -.168750003}
-      - {x: -.35374999, y: -.213750005}
-      - {x: -.33375001, y: -.243750006}
-      - {x: -.316249996, y: -.263749987}
-      - {x: -.266250014, y: -.316249996}
-      - {x: -.226249993, y: -.346249998}
-      - {x: -.201250002, y: -.361250013}
-      - {x: -.151250005, y: -.383749992}
-      - {x: -.106250003, y: -.398750007}
-      - {x: -.0712499991, y: -.40625}
-      - {x: .0712499991, y: -.40625}
-      - {x: .108750001, y: -.401250005}
-      - {x: .153750002, y: -.386249989}
-      - {x: .201250002, y: -.361250013}
+    - - {x: 0.22625, y: -0.34625}
+      - {x: 0.26625, y: -0.31625}
+      - {x: 0.32875, y: -0.25375}
+      - {x: 0.35375, y: -0.21375}
+      - {x: 0.37875, y: -0.16375}
+      - {x: 0.39625, y: -0.12375}
+      - {x: 0.40625, y: -0.07625}
+      - {x: 0.40625, y: 0.07625}
+      - {x: 0.39375, y: 0.13375}
+      - {x: 0.35375, y: 0.21375}
+      - {x: 0.32625, y: 0.25375}
+      - {x: 0.26875, y: 0.31375}
+      - {x: 0.23625, y: 0.33875}
+      - {x: 0.21125, y: 0.35375}
+      - {x: 0.19625, y: 0.36375}
+      - {x: 0.16875, y: 0.37625}
+      - {x: 0.14375, y: 0.38625}
+      - {x: 0.10625, y: 0.39875}
+      - {x: 0.07375, y: 0.40625}
+      - {x: -0.07375, y: 0.40625}
+      - {x: -0.11625, y: 0.39875}
+      - {x: -0.16875, y: 0.37625}
+      - {x: -0.21375, y: 0.35375}
+      - {x: -0.25375, y: 0.32625}
+      - {x: -0.26875, y: 0.31375}
+      - {x: -0.32625, y: 0.25375}
+      - {x: -0.35375, y: 0.21375}
+      - {x: -0.36375, y: 0.19625}
+      - {x: -0.38875, y: 0.14625}
+      - {x: -0.39875, y: 0.10625}
+      - {x: -0.40625, y: 0.07375}
+      - {x: -0.40625, y: -0.07375}
+      - {x: -0.39875, y: -0.11625}
+      - {x: -0.37625, y: -0.16875}
+      - {x: -0.35375, y: -0.21375}
+      - {x: -0.33375, y: -0.24375}
+      - {x: -0.31625, y: -0.26375}
+      - {x: -0.26625, y: -0.31625}
+      - {x: -0.22625, y: -0.34625}
+      - {x: -0.20125, y: -0.36125}
+      - {x: -0.15125, y: -0.38375}
+      - {x: -0.10625, y: -0.39875}
+      - {x: -0.07125, y: -0.40625}
+      - {x: 0.07125, y: -0.40625}
+      - {x: 0.10875, y: -0.40125}
+      - {x: 0.15375, y: -0.38625}
+      - {x: 0.20125, y: -0.36125}
 --- !u!96 &9609284
 TrailRenderer:
   m_ObjectHideFlags: 1
@@ -129,13 +131,13 @@ TrailRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: .5
+  m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Time: .300000012
-  m_StartWidth: .129999995
+  m_Time: 0.3
+  m_StartWidth: 0.13
   m_EndWidth: 0
   m_Colors:
     m_Color[0]:
@@ -153,7 +155,7 @@ TrailRenderer:
     m_Color[4]:
       serializedVersion: 2
       rgba: 12779680
-  m_MinVertexDistance: .00999999978
+  m_MinVertexDistance: 0.01
   m_Autodestruct: 0
 --- !u!114 &11469928
 MonoBehaviour:
@@ -166,13 +168,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0efb976f60a4a4c44824d665bdc5e616, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ballInitialVelocity: 600
+  ballInitialVelocity: 4500
   strikeForce: 5
   isBallInPlay: 0
   rb2D: {fileID: 0}
   isEggBall: 1
   hasRainbowTrail: 0
   rainbowTrail: {fileID: 9609284}
+  ballSplatter: {fileID: 0}
   spriteRend: {fileID: 21232602}
   hasSplit: 0
 --- !u!212 &21232602
@@ -196,13 +199,15 @@ SpriteRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: .5
+  m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: feb73ebdd0aaa0c41aa13dd5b912b25c, type: 3}
   m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -220,11 +225,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 6.5
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 3.49000001
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_Mass
@@ -236,6 +241,14 @@ Prefab:
       objectReference: {fileID: 6200000, guid: a620f3195852ce64db62887af2202580, type: 2}
     - target: {fileID: 0}
       propertyPath: m_CollisionDetection
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: ballInitialVelocity
+      value: 4500
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

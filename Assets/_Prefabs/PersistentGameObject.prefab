@@ -24,7 +24,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 106694}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.11670649, y: -.493301988, z: 9.4609375}
+  m_LocalPosition: {x: -1.1167065, y: -0.493302, z: 9.4609375}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -40,7 +40,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc1347a97c1206f47ba6e41dc83b8391, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paddleSize: .5
+  paddleSize: 0.5
   ballSize: 1
   roomNbr: 0
   luck: 0
@@ -61,6 +61,8 @@ MonoBehaviour:
   superhot: 0
   splitBalls: 0
   rainbowTrail: 0
+  continuumBalls: 0
+  bumper: 0
   isPaddleMoving: 0
 --- !u!114 &11488002
 MonoBehaviour:
@@ -107,6 +109,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: paddleSize
       value: .5
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: screenShakeIntensity
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

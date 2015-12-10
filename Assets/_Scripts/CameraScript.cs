@@ -18,7 +18,7 @@ public class CameraScript : MonoBehaviour {
 
     public void Shake (float intensity)
     {
-        transform.position = new Vector3(transform.position.x + Random.Range(-intensity * perScript.screenShakeIntensity, intensity*perScript.screenShakeIntensity), transform.position.x + Random.Range(intensity * perScript.screenShakeIntensity, intensity*perScript.screenShakeIntensity), -10);
+        transform.position = new Vector3(transform.position.x + Random.Range(-intensity*10 * perScript.screenShakeIntensity, intensity*10*perScript.screenShakeIntensity), transform.position.x + Random.Range(intensity * perScript.screenShakeIntensity, intensity*perScript.screenShakeIntensity), -10);
     }
 	
 }

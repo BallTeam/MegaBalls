@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class PAddleSelectScript : MonoBehaviour {
 
@@ -12,7 +13,8 @@ public class PAddleSelectScript : MonoBehaviour {
 
     void LoadShop()
     {
-        Application.LoadLevel("Shop");
+        SceneManager.LoadScene("Shop");
+        //Application.LoadLevel("Shop");
     }
 
     public void CirclePaddle ()
