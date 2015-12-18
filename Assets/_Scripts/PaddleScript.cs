@@ -3,7 +3,7 @@ using System.Collections;
 
 public class PaddleScript : MonoBehaviour {
 
-    public float paddleSpeed = 1*10;
+    public float paddleSpeed;
 
     public GameObject bumperBubble;
     public GameObject ball_Standard;
@@ -20,6 +20,7 @@ public class PaddleScript : MonoBehaviour {
     void Start ()
     {
         perScript = GameObject.FindGameObjectWithTag("PersistentScript").GetComponent<PersistentScripts>();
+        paddleSpeed = perScript.paddleSensibility*10;
         transform.position = new Vector3 (0,-5.8f*10,0);
         if (perScript.eggBalls)
         {
@@ -33,7 +34,10 @@ public class PaddleScript : MonoBehaviour {
         }
     }
 
-
+    void OnDestroy ()
+    {
+        perScript.isPaddleMoving = true;
+    }
 
     void Update ()
     {

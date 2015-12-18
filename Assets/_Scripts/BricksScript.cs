@@ -10,8 +10,13 @@ public class BricksScript : MonoBehaviour {
         if (other.gameObject.tag == "Ball")
         {
             Instantiate(brickParticle, transform.position, Quaternion.identity);
-            GM.instance.DestroyBrick();
             Destroy(gameObject, .03f);
         }
+    }
+
+    void OnDestroy ()
+    {
+        GM.instance.DestroyBrick();
+
     }
 }

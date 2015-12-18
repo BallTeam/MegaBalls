@@ -223,7 +223,7 @@ MonoBehaviour:
   - {fileID: 1601980478}
   continuumBalls: {fileID: 21300000, guid: 0ec035f5c84278249bd3f7facf47bf72, type: 3}
   bumper: {fileID: 21300000, guid: c18d31a7ea7a5684885e6179df9e4083, type: 3}
-  paddleMulti: {fileID: 21300000, guid: 9f15a3ad563c53443b1ec3815545e24e, type: 3}
+  ultrahot: {fileID: 21300000, guid: 081e07ef019e461479c9fe387c274cdc, type: 3}
   inventorySlots: {fileID: 21300000, guid: 3467a0b33ff6d1f408e27a1f84e0a2d9, type: 3}
   drunkBalls: {fileID: 21300000, guid: a0dc926478e556a438a297e20c78a059, type: 3}
   ghostBalls: {fileID: 21300000, guid: d097cb8ce6b39ec468f0d35559417030, type: 3}
@@ -684,7 +684,7 @@ MonoBehaviour:
   - {fileID: 47506163}
   continuumBalls: {fileID: 21300000, guid: 0ec035f5c84278249bd3f7facf47bf72, type: 3}
   bumper: {fileID: 21300000, guid: c18d31a7ea7a5684885e6179df9e4083, type: 3}
-  paddleMulti: {fileID: 21300000, guid: 9f15a3ad563c53443b1ec3815545e24e, type: 3}
+  ultrahot: {fileID: 21300000, guid: 081e07ef019e461479c9fe387c274cdc, type: 3}
   inventorySlots: {fileID: 21300000, guid: 3467a0b33ff6d1f408e27a1f84e0a2d9, type: 3}
   drunkBalls: {fileID: 21300000, guid: a0dc926478e556a438a297e20c78a059, type: 3}
   ghostBalls: {fileID: 21300000, guid: d097cb8ce6b39ec468f0d35559417030, type: 3}
@@ -832,7 +832,7 @@ MonoBehaviour:
   - {fileID: 47506163}
   continuumBalls: {fileID: 21300000, guid: 0ec035f5c84278249bd3f7facf47bf72, type: 3}
   bumper: {fileID: 21300000, guid: c18d31a7ea7a5684885e6179df9e4083, type: 3}
-  paddleMulti: {fileID: 21300000, guid: 9f15a3ad563c53443b1ec3815545e24e, type: 3}
+  ultrahot: {fileID: 21300000, guid: 081e07ef019e461479c9fe387c274cdc, type: 3}
   inventorySlots: {fileID: 21300000, guid: 3467a0b33ff6d1f408e27a1f84e0a2d9, type: 3}
   drunkBalls: {fileID: 21300000, guid: a0dc926478e556a438a297e20c78a059, type: 3}
   ghostBalls: {fileID: 21300000, guid: d097cb8ce6b39ec468f0d35559417030, type: 3}

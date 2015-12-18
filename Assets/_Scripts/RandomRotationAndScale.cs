@@ -8,9 +8,12 @@ public class RandomRotationAndScale : MonoBehaviour {
     public float maxScale;
     public bool randomRotation;
 
+    PersistentScripts perScript;
+
     void Start ()
     {
-        float r = Random.Range(minScale, maxScale);
+        perScript = GameObject.FindGameObjectWithTag("PersistentScript").GetComponent<PersistentScripts>();
+        float r = Random.Range(minScale*perScript.splatterIntensity, maxScale*perScript.splatterIntensity);
         transform.localScale = new Vector3(r, r,0);
         if (randomRotation)
         {

@@ -78,7 +78,9 @@ public class GM : MonoBehaviour
 
     void CheckGameOver()
     {
-        Debug.Log("GM counted " + brickNbr  + " bricks at " + Time.time);
+        
+        //CountBricks();
+        Debug.Log("GM counted " + brickNbr + " bricks at " + Time.time);
         if (brickNbr < 1)
         {
             youWon.SetActive(true);

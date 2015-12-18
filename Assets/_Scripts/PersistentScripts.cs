@@ -17,7 +17,9 @@ public class PersistentScripts : MonoBehaviour {
     public bool brickSlowDown;
     public bool endRoomSlowDown;
     public int[] playerInventory;
-    public float paddleSensibility;
+    public float paddleSensibility = 1;
+    public float gibsIntensity = 1;
+    public float splatterIntensity = 1;
 
     public float screenShakeIntensity = 1;
 
@@ -34,6 +36,7 @@ public class PersistentScripts : MonoBehaviour {
     public bool rainbowTrail;
     public bool continuumBalls;
     public bool bumper;
+    public bool ultrahot;
 
 
     bool fastForward;
@@ -67,11 +70,22 @@ public class PersistentScripts : MonoBehaviour {
 
     void Update ()
     {
-        if (superhot)
+        if (ultrahot)
         {
             if (isPaddleMoving)
             {
-                Time.timeScale = Mathf.Lerp(Time.timeScale, 2.5f, 0.15f);
+                Time.timeScale = Mathf.Lerp(Time.timeScale, 3f, 0.15f);
+            }
+            else
+            {
+                Time.timeScale = Mathf.Lerp(Time.timeScale, 0f, 0.35f);
+            }
+        }
+        else if (superhot)
+        {
+            if (isPaddleMoving)
+            {
+                Time.timeScale = Mathf.Lerp(Time.timeScale, 2f, 0.15f);
             }
             else
             {

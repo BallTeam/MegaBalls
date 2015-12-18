@@ -12,7 +12,7 @@ public class ItemShopScripts : MonoBehaviour {
 
     public Sprite continuumBalls;
     public Sprite bumper;
-    public Sprite paddleMulti;
+    public Sprite ultrahot;
     public Sprite inventorySlots;
     public Sprite drunkBalls;
     public Sprite ghostBalls;
@@ -31,7 +31,7 @@ public class ItemShopScripts : MonoBehaviour {
     //item index
     //01 = Continuum balls
     //02 = bumper
-    //03 = circle paddle
+    //03 = ultrahot
     //04 = more inventory space
     //05 = drunk balls
     //06 = ghost balls
@@ -77,7 +77,7 @@ public class ItemShopScripts : MonoBehaviour {
                         }
                         break;
                     case 3:
-                        if (perScript.multiPaddle)
+                        if (perScript.ultrahot)
                         {
                             sameItem = true;
                         }
@@ -148,7 +148,7 @@ public class ItemShopScripts : MonoBehaviour {
                 sRend.sprite = bumper;
                 break;
             case 3:
-                sRend.sprite = paddleMulti;
+                sRend.sprite = ultrahot;
                 break;
             case 4:
                 sRend.sprite = inventorySlots;
@@ -213,10 +213,7 @@ public class ItemShopScripts : MonoBehaviour {
                 perScript.bumper = true;
                 break;
             case 3:
-                perScript.circlePaddle = false;
-                perScript.flatPaddle = false;
-                perScript.multiPaddle = true;
-                perScript.trianglePaddle = false;
+                perScript.ultrahot = true;
                 break;
             case 4:
                 perScript.playerInventory = new int[] { perScript.playerInventory[0], 0, 0};
